@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/particles.min.js"></script>
+</head>
+<body>
+<div id="particles-js"></div>
+<div class="content">
+    <header>
+        <a id="logo" href="/index.html"><img src="img/logo.png" height="47" width="207"/></a>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Portfolio</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Label</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur <br> adipisicing elit. Deleniti, quasi!</p>
+
+        <img class="but" src="img/buttonbottom.png" height="44" width="44"/>
+    </section>
+    <main>
+        <h1>Portfolio</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <ul class="category">
+            <li><a class="active" rel="all">text</a></li>
+            <li><a rel="firsr">text</a></li>
+            <li><a rel="second">text</a></li>
+        </ul>
+        <ul class="item">
+            <li>
+                <img src="img/job.jpg" width="275" alt="">
+                <a href="#" class="active animated pulse">
+                 text
+                </a>
+            </li>
+            <li rel="second">
+                <img src="img/job.jpg" width="275" alt="">
+                <a href="#" class="active animated pulse">
+                    text
+                </a>
+            </li>
+            <li rel="firsr">
+                <img src="img/job.jpg" width="275" alt="">
+                <a href="#" class="active animated pulse">
+                    text
+                </a>
+            </li>
+            <li>
+                <img src="img/job.jpg" width="275" alt="">
+                <a href="#" class="active animated pulse">
+                    text
+                </a>
+            </li>
+            <li rel="second">
+                <img src="img/job.jpg" width="275" alt="">
+                <a href="#" class="active animated pulse">
+                    text
+                </a>
+            </li>
+            <li>
+                <img src="img/job.jpg" width="275" alt="">
+                <a href="#" class="active animated pulse">
+                    text
+                </a>
+            </li>
+        </ul>
+    </main>
+    <section id="about">
+        <h1>Contact</h1>
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <div id="form">
+            <form action="">
+                <input type="text" placeholder="You name">
+                <input type="email" placeholder="You email">
+                <textarea placeholder="You message"></textarea>
+                <input type="submit">
+            </form>
+            <div class="info">
+                <h4>infotmation</h4>
+                <p class="geo">Lorem ipsum dolor sit amet.</p>
+                <p class="tel">+444 123 45 78</p>
+                <p class="fax">+444 123 45 78</p>
+                <p class="mail">email</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>footer</p>
+        <a href="#" class="back-top">
+            <img src="img/buttonup.png" height="44" width="44"/>
+        </a>
+    </footer>
+</div>
+<script>
+
+    particlesJS.load('particles-js', 'js/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+
+    $('.back-top').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
+
+    $('body').on('click', '.category li a', function() {
+            $('.category li a').removeClass('active');
+            $(this).addClass('active');
+
+
+            var thisItem = $(this).attr('rel');
+
+            if (thisItem != "all") {
+                $('.item li:visible').stop().fadeOut("slow", function () {
+                    $('.item li[rel=' + thisItem + ']').fadeIn("slow");
+                });
+
+            } else {
+                $('.item li:visible').stop().fadeOut("slow", function () {
+                    $('.item li').fadeIn("slow");
+                });
+
+
+            }
+        }
+        )
+
+
+</script>
+</body>
+</html>

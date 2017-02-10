@@ -1,0 +1,249 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+.content{
+    background: #fff;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+#particles-js{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+/*HEDER*/
+header{
+    background: #fff;
+    height: 95px;
+    position: relative;
+    width: 100%;
+
+}
+#logo{
+    float: left;
+    display: inline-block;
+    height: 47px;
+    margin: 26px 0 0 40px;
+}
+header >nav{
+    float: right;
+    margin-top: 30px;
+    margin-right: 50px;
+}
+header>nav>a{
+    display: inline-block;
+    padding: 13px 10px 14px 12px;
+    font-size: 0.85em;
+
+    color: #000;
+    text-transform: uppercase;
+}
+header>nav>a:hover{
+    background: #1bbc9b;
+    color: #fff;
+
+}
+
+section{
+    width: 100%;
+    height: 455px;
+    background: url("../img/bg.jpg") center no-repeat ;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-weight: 300;
+
+}
+section h1{
+    padding-top:80px;
+    padding-bottom: 40px;
+    font-size: 3.44em;
+
+}
+section p{
+
+    font-size: 1.125em;
+}
+section .but{
+    margin-top: 40px;
+    font-weight: bold;
+
+}
+/*main*/
+
+main{
+    text-align: center;
+    height: 700px;
+    position: relative;
+    width: 100%;
+    background: #fff;
+}
+main h1{
+    font-size: 1.75em;
+    padding-top: 50px;
+    margin-bottom: 20px;
+}
+main p{
+    font-size: 1em;
+
+}
+
+main ul.category{
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+main ul.category li{
+    display: inline-block;
+}
+main ul.category li a{
+    padding: 14px 12px;
+    background: #1bbc9b;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.81em;
+    font-weight: bold;
+}
+main ul.category li a.active{
+    background: #16a086;
+}
+main ul.item{
+    margin-top: 45px;
+}
+main ul.item li{
+    display: inline-block;
+    margin: 0 5px 30px 5px;
+    position:relative;
+}
+main ul.item li a{
+    display: none;
+    position:absolute;
+    color: #fff;
+    left:0;
+    bottom:0;
+    right:0;
+    top:0;
+    padding-top: 30%;
+    background:rgba(80,179,146, 0.7);
+}
+
+main ul.item li:hover a{
+    display: block;
+
+}
+main ul.item li:hover a, main ul.item li:hover{
+
+}
+
+footer{
+    height: 86px;
+    background: #2d3e50;
+    color: #fff;
+    font-size: 0.85em;
+    position: relative;
+}
+footer p{
+    position: absolute;
+    left: 40px;
+    top: 45%;
+    float: left;
+
+}
+footer a{
+    float: right;
+    position: absolute;
+    top:23px;
+    right: 40px;
+}
+#about{
+    height: 500px;
+    background: #ecf0f1;
+    color: #000;
+}
+#about h1{
+    font-size: 1.75em;
+    padding-top: 52px;
+    padding-bottom: 18px;
+
+}
+#about p{
+    font-size: 1em;
+
+}
+#form{
+    display: block;
+    padding-top: 50px;
+
+}
+form{
+    float: left;
+    width: 48%;
+    margin-left: 40px;
+
+}
+input{
+    width: 200px;
+    height: 45px;
+    margin-right: 20px;
+    border: 2px solid #bec3c7;
+    padding-left: 15px;
+
+}
+input[type="email"]{
+    margin-right: 0;
+}
+textarea{
+    width: 425px;
+    height: 135px;
+    margin-top: 10px;
+    border: 2px solid #bec3c7;
+    padding: 16px;
+
+}
+input[type="submit"]{
+    width: auto;
+    float: right;
+    margin-top: 23px;
+
+    border: none;
+    background: #1bbc9b;
+    font-size: 0.82em;
+    color: #fff;
+    padding: 14px 28px;
+    font-weight: bold;
+}
+.info{
+    float: left;
+    width: 48%;
+    text-align: left;
+
+}
+.info h4{
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+.info p{
+    display: list-item;
+    list-style-position: inside;
+    line-height:35px;
+    font-size: 0.875em;
+
+}
+p.geo{
+    list-style-image: url('../img/geo.png');
+}
+p.tel{
+    list-style-image: url('../img/tel.png');
+}
+p.fax{
+    list-style-image: url('../img/fax.png');
+}
+p.mail{
+    list-style-image: url('../img/mail.png');
+}
