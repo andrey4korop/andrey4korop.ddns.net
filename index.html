@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/particles.min.js"></script>
 </head>
 <body>
@@ -14,12 +15,14 @@
 <div class="content">
     <header>
         <a id="logo" href="/index.html"><img src="img/logo.png" height="47" width="207"/></a>
+        <a href="" id="menu"><img src="img/buttonmenu.png"></a>
         <nav>
             <a href="#">Home</a>
             <a href="#">Portfolio</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
         </nav>
+
     </header>
 
     <section>
@@ -32,9 +35,9 @@
         <h1>Portfolio</h1>
         <p>Lorem ipsum dolor sit amet.</p>
         <ul class="category">
-            <li><a class="active" rel="all">text</a></li>
-            <li><a rel="firsr">text</a></li>
-            <li><a rel="second">text</a></li>
+            <li><a hreh="" class="active" rel="all">text</a></li>
+            <li><a hreh="" rel="firsr">text</a></li>
+            <li><a hreh="" rel="second">text</a></li>
         </ul>
         <ul class="item">
             <li>
@@ -80,10 +83,13 @@
         <h3>Lorem ipsum dolor sit amet.</h3>
         <div id="form">
             <form action="">
+               <div class="wit">
                 <input type="text" placeholder="You name">
                 <input type="email" placeholder="You email">
+
                 <textarea placeholder="You message"></textarea>
                 <input type="submit">
+               </div>
             </form>
             <div class="info">
                 <h4>infotmation</h4>
@@ -130,12 +136,23 @@
                 $('.item li:visible').stop().fadeOut("slow", function () {
                     $('.item li').fadeIn("slow");
                 });
-
-
             }
         }
-        )
+        );
 
+
+        var menu = $('header nav');
+
+        $('body').on('click', '#menu', function(e) {
+            e.preventDefault();
+            menu.slideToggle();
+        });
+        $(window).resize(function(){
+            var wid = $(window).width();
+            if(wid > 600 && menu.is(':hidden')) {
+                menu.removeAttr('style');
+            }
+        });
 
 </script>
 </body>

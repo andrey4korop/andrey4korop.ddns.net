@@ -21,6 +21,7 @@ header{
     height: 95px;
     position: relative;
     width: 100%;
+    z-index: 50;
 
 }
 #logo{
@@ -42,12 +43,19 @@ header>nav>a{
     color: #000;
     text-transform: uppercase;
 }
+#menu img{
+    width: 100px;
+ }
+#menu{
+    float: right;
+    display: none;
+}
 header>nav>a:hover{
     background: #1bbc9b;
     color: #fff;
 
 }
-
+/*SECTION*/
 section{
     width: 100%;
     height: 455px;
@@ -78,7 +86,7 @@ section .but{
 
 main{
     text-align: center;
-    height: 700px;
+
     position: relative;
     width: 100%;
     background: #fff;
@@ -108,6 +116,7 @@ main ul.category li a{
     text-transform: uppercase;
     font-size: 0.81em;
     font-weight: bold;
+    cursor: pointer;
 }
 main ul.category li a.active{
     background: #16a086;
@@ -139,7 +148,7 @@ main ul.item li:hover a{
 main ul.item li:hover a, main ul.item li:hover{
 
 }
-
+/*FOOTER*/
 footer{
     height: 86px;
     background: #2d3e50;
@@ -160,10 +169,12 @@ footer a{
     top:23px;
     right: 40px;
 }
+/*ABOUT*/
 #about{
-    height: 500px;
+    width: 100%;
     background: #ecf0f1;
     color: #000;
+    height: 100%;
 }
 #about h1{
     font-size: 1.75em;
@@ -179,37 +190,44 @@ footer a{
     display: block;
     padding-top: 50px;
 
-}
-form{
-    float: left;
-    width: 48%;
-    margin-left: 40px;
 
 }
+form{
+    display: inline-block;
+    width: 45%;
+    margin-left: 40px;
+    padding-bottom: 20px;
+}
+.wit{
+    border: none;
+    box-sizing: border-box;
+}
 input{
-    width: 200px;
+    width: 48%;
     height: 45px;
-    margin-right: 20px;
+    margin-right: 2%;
     border: 2px solid #bec3c7;
     padding-left: 15px;
+    box-sizing: border-box;
 
 }
 input[type="email"]{
     margin-right: 0;
 }
 textarea{
-    width: 425px;
+    width: 99%;
     height: 135px;
     margin-top: 10px;
     border: 2px solid #bec3c7;
     padding: 16px;
+    box-sizing: border-box;
 
 }
 input[type="submit"]{
     width: auto;
     float: right;
     margin-top: 23px;
-
+    margin-right: 0;
     border: none;
     background: #1bbc9b;
     font-size: 0.82em;
@@ -218,10 +236,11 @@ input[type="submit"]{
     font-weight: bold;
 }
 .info{
-    float: left;
+    display: inline-block;
     width: 48%;
     text-align: left;
-
+   float: right;
+    padding-bottom: 20px;
 }
 .info h4{
     text-transform: uppercase;
@@ -246,4 +265,135 @@ p.fax{
 }
 p.mail{
     list-style-image: url('../img/mail.png');
+}
+
+
+
+
+@media screen and (max-width: 1080px){
+    #particles-js{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 760px) {
+
+    .info {
+
+        float: none;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    form {
+
+        float: none;
+        width: 95%;
+        margin: 0 auto;
+
+    }
+
+    input {
+        width: 49%;
+        height: 45px;
+        margin-right: 0;
+        border: 2px solid #bec3c7;
+        padding-left: 15px;
+        box-sizing: border-box;
+        float: left;
+
+    }
+
+    input[type="email"] {
+        margin-right: 0;
+        float: right;
+    }
+    .wit{
+        width: 100%;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    textarea {
+        width: 100%;
+        height: 135px;
+        margin-top: 10px;
+        border: 2px solid #bec3c7;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        width: auto;
+        float: none;
+        margin-top: 23px;
+
+        border: none;
+        background: #1bbc9b;
+        font-size: 0.82em;
+        color: #fff;
+        padding: 14px 28px;
+        font-weight: bold;
+    }
+
+}
+
+@media screen and (max-width: 885px){
+    .item img{
+        width: 100%;
+    }
+    main ul.item li{
+        width: 47%;
+        margin: 0 1% 25px 1%;
+    }
+    header >nav{
+        margin-right: 1%;
+    }
+}
+@media screen and (max-width: 450px){
+    main ul.item li{
+        width: 97%;
+        margin: 0 1% 25px 1%;
+    }
+}
+@media screen and (max-width: 600px){
+    header>nav{
+        display: none;
+        position: absolute;
+        right: 0px;
+        top: 64px;
+
+
+    }
+    header>nav>a{
+        display: block;
+        border-top: 1px solid #fff;
+        background: #1bbc9b;
+        padding: 13px 30%;
+        font-size: 1em;
+        text-align: center;
+        color: #fff;
+    }
+    header>nav>a:hover{
+        background: #16a086;;
+    }
+
+    #menu{
+
+        display: inline-block;
+    }
+}
+@media screen and (max-width: 350px){
+    header{
+        height: 70px;
+    }
+header nav{
+    top: 39px;
+}
+    #logo {
+        margin: 10px 0 0 10px
+    }
+    #menu img{
+        width: 70px;
+    }
 }
