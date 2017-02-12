@@ -67,6 +67,35 @@ section{
     font-weight: 300;
 
 }
+section#project{
+    background: #ecf0f1;
+    color: #000;
+    min-height: 500px;
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: justify;
+
+
+}
+section#project img{
+    width: 60%;
+    float: left;
+    margin: 30px 1% 1% 1%;
+    border: 1px solid #bec3c7;
+    box-sizing: border-box;
+}
+
+section#project h1{
+    padding: 30px 0 1% 0;
+    font-size: 1.75em;
+    text-align: center;
+}
+section#project p{
+font-size: 1em;
+}
+
 section h1{
     padding-top:80px;
     padding-bottom: 40px;
@@ -89,7 +118,17 @@ main{
 
     position: relative;
     width: 100%;
+    height: 100%;
     background: #fff;
+}
+#demo{
+    text-transform: uppercase;
+    padding: 18px;
+    font-size: 2.5em;
+    color: #fff;
+    background: #1bbc9b;
+    display: inline-block;
+    margin: 25px;
 }
 main h1{
     font-size: 1.75em;
@@ -147,6 +186,19 @@ main ul.item li:hover a{
 }
 main ul.item li:hover a, main ul.item li:hover{
 
+}
+.slider img{
+    width: 100%;
+}
+#slider{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+#slider p{
+
+    font-style: italic;
+    margin: 10px;
 }
 /*FOOTER*/
 footer{
@@ -266,7 +318,27 @@ p.fax{
 p.mail{
     list-style-image: url('../img/mail.png');
 }
+.project{
+    width: 100%;
+    padding: 3%;
+    text-align: justify;
+    box-sizing: border-box;
+}
+.project a{
+    padding: 4px;
+    color: #fff;
+    font-weight: bold;
+    font-style: italic;
+    background: #1bbc9b;
+}
+.project span{
+    font-weight: bold;
+}
+.project li{
 
+    list-style: none;
+    padding: 5px 0;
+}
 
 
 
@@ -284,7 +356,22 @@ p.mail{
         width: 95%;
         margin: 0 auto;
     }
-
+    section#project img {
+        width: 97%;
+        float: none;
+    }
+    section#project h1{
+        padding-top: 15px;
+    }
+    #demo {
+        text-transform: uppercase;
+        padding: 15px;
+        font-size: 2em;
+        color: #fff;
+        background: #1bbc9b;
+        display: inline-block;
+        margin: 25px;
+    }
     form {
 
         float: none;
