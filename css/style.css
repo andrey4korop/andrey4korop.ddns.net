@@ -13,6 +13,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
+    z-index: -1;
 }
 
 /*HEDER*/
@@ -67,7 +68,7 @@ section{
     font-weight: 300;
 
 }
-section#project{
+section#project, .portfolio-left, .portfolio-rigth{
     background: #ecf0f1;
     color: #000;
     min-height: 500px;
@@ -75,8 +76,12 @@ section#project{
     box-sizing: border-box;
     padding-left: 3%;
     padding-right: 3%;
+    padding-bottom: 3%;
     text-align: justify;
-
+}
+.portfolio-rigth{
+    background: #1bbc9b;
+    color: #fff;
 
 }
 section#project img{
@@ -87,7 +92,7 @@ section#project img{
     box-sizing: border-box;
 }
 
-section#project h1{
+section#project h1, .portfolio-left h1, .portfolio-rigth h1{
     padding: 30px 0 1% 0;
     font-size: 1.75em;
     text-align: center;
@@ -109,6 +114,27 @@ section p{
 section .but{
     margin-top: 40px;
     font-weight: bold;
+
+}
+
+.portfolio-left img.prev, .portfolio-rigth img.prev{
+    width: 60%;
+
+    margin: 30px 1% 1% 1%;
+    border: 1px solid #bec3c7;
+    box-sizing: border-box;
+}
+.portfolio-left img.prev{
+    float: left;
+}
+.portfolio-rigth img.prev{
+    float: right;
+}
+
+p>a.go{
+
+    text-align: center;
+    display: block;
 
 }
 /*main*/
@@ -157,7 +183,7 @@ main ul.category li a{
     font-weight: bold;
     cursor: pointer;
 }
-main ul.category li a.active{
+main ul.category li a.active, #active{
     background: #16a086;
 }
 main ul.item{
@@ -340,7 +366,32 @@ p.mail{
     padding: 5px 0;
 }
 
+/*pagination*/
+.pagination{
+    text-align: center;
+    background: #ecf0f1;
+    display: flex;
+    justify-content: center;
+}
+.pagination p{
+    display: inline-block;
 
+    background: #1bbc9b;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    margin: 27px 1%;
+    color: #fff;
+}
+.pagination p a{
+    color: #fff;
+    width: 28px;
+    height: 28px;
+    display: block;
+}
+.pagination p#active{
+    font-weight:bold;
+}
 
 @media screen and (max-width: 1080px){
     #particles-js{
@@ -356,7 +407,7 @@ p.mail{
         width: 95%;
         margin: 0 auto;
     }
-    section#project img {
+    section#project img, .portfolio-left img.prev, .portfolio-rigth img.prev{
         width: 97%;
         float: none;
     }
