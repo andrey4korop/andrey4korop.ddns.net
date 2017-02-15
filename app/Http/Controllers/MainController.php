@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 /*load models*/
 use App\Category;
 use App\Project;
@@ -16,8 +16,8 @@ class MainController extends Controller
         $data['categorys'] = $categorys;
         return view('index', $data);
     }
-    public function portfolio($page=1){
-        $projects = Project::all();
+    public function portfolio(){
+        $projects = DB::table('projects')->paginate(2);
         $data['projects'] = $projects;
         return view('portfolio',$data);
     }
