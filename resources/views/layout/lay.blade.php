@@ -118,7 +118,7 @@
         speed: 300,
         slidesToShow: 1,
         adaptiveHeight: true,
-        lazyLoad: 'ondemand',
+        //lazyLoad: 'ondemand'
         fade: true
     });
 </script>

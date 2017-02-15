@@ -87,7 +87,7 @@ section#project, .portfolio{
 section#project img{
     width: 60%;
     float: left;
-    margin: 30px 1% 1% 1%;
+    margin: 30px 1% 9px 1%;
     border: 1px solid #bec3c7;
     box-sizing: border-box;
 }
